@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using ButtonCircle.FormsPlugin.Droid;
 using Prism;
 using Prism.Ioc;
 
@@ -17,6 +18,9 @@ namespace BlankApp1.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+
+            ButtonCircleRenderer.Init();
+
             LoadApplication(new App(new AndroidInitializer()));
         }
     }
@@ -29,4 +33,3 @@ namespace BlankApp1.Droid
         }
     }
 }
-
